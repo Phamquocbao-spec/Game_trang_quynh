@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#161427">
+  <title>Trạng Quỳnh: Kẻ Hack Thiên Mệnh</title>
+  <meta name="description" content="Game dân gian remix: hóa thân thành Trạng Quỳnh, vượt ba ải trí tuệ để lên Bế Quan.">
+  <link rel="stylesheet" href="sytem.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">TQ</div>
+        <div>
+          <strong>TRẠNG QUỲNH: KẺ HACK THIÊN MỆNH</strong>
+          <small>DÂN GIAN REMIX · HÀNH TRÌNH BẾ QUAN</small>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="small-btn" id="sound-toggle">Âm thanh: Bật</button>
+        <button class="small-btn" id="help-btn">Hướng dẫn</button>
+        <button class="small-btn" id="restart-btn">Chơi lại</button>
+      </div>
+    </header>
+
+    <section class="hero-panel">
+      <div class="hero-copy">
+        <div class="eyebrow">Ý tưởng từ hình tượng dân gian Trạng Quỳnh</div>
+        <h1>Vượt 3 ải trí tuệ để tiến lên <em>BẾ QUAN</em></h1>
+        <p>Người chơi hóa thân thành Trạng Quỳnh, giải câu đố dân gian, xử lý các màn đố khó hơn và cuối cùng đối thoại “hack não” với Ngọc Hoàng để mở cánh cổng Thiên Mệnh.</p>
+      </div>
+      <div class="hero-badges">
+        <span>Ải 1 · 5 câu đố dân gian</span>
+        <span>Ải 2 · 5 câu hỏi nâng cao</span>
+        <span>Ải 3 · 5 câu đối đáp Ngọc Hoàng</span>
+      </div>
+    </section>
+
+    <section class="status-row">
+      <div class="objective-card">
+        <small>NHIỆM VỤ HIỆN TẠI</small>
+        <strong id="objective-text">Bắt đầu hành trình và đi tới Ải 1.</strong>
+      </div>
+      <div class="progress-card">
+        <small>TIẾN ĐỘ HÀNH TRÌNH</small>
+        <div class="steps">
+          <span id="step-1" class="step current">ẢI 1</span>
+          <span id="step-2" class="step locked">ẢI 2</span>
+          <span id="step-3" class="step locked">ẢI 3</span>
+          <span id="step-4" class="step locked">BẾ QUAN</span>
+        </div>
+      </div>
+    </section>
+
+    <main class="game-shell">
+      <div class="viewport">
+        <canvas id="world" width="1120" height="630" aria-label="Bản đồ Trạng Quỳnh"></canvas>
+        <div id="toast" class="toast"></div>
+        <div id="interact" class="interact" hidden>
+          <span class="keycap">E</span>
+          <span id="interact-text">Tương tác</span>
+        </div>
+        <div id="overlay" class="overlay" hidden></div>
+      </div>
+
+      <div class="mobile-controls">
+        <div class="dpad">
+          <button data-dir="up">▲</button>
+          <div class="mid-row">
+            <button data-dir="left">◀</button>
+            <button data-dir="down">▼</button>
+            <button data-dir="right">▶</button>
+          </div>
+        </div>
+        <button id="mobile-interact" class="mobile-interact">E · TƯƠNG TÁC</button>
+      </div>
+    </main>
+
+    <footer class="footer-bar">
+      <div class="controls-hint">
+        <span><kbd>W A S D</kbd> hoặc <kbd>↑ ↓ ← →</kbd> để di chuyển</span>
+        <span><kbd>E</kbd> để tương tác</span>
+        <span>Nhấp chuột lên bản đồ để tự đi đến</span>
+      </div>
+      <div id="quote-line" class="quote-line">“Càng khó càng vui. Đố mới đúng sở trường của ta!” — Trạng Quỳnh</div>
+    </footer>
+  </div>
+</body>
+</html>
